@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
 import { Suspense } from 'react/cjs/react.production.min';
-
+import { Admin } from './components/LandingPages/Admin/Admin';
 import ReactGA from 'react-ga';
 import InitializeReactGA from './helper/googleAnalytics.ts';
 import NotFound from './components/LandingPages/NotFound/NotFound';
@@ -28,6 +28,7 @@ const Sponsors = React.lazy(() =>
 const Gallery = React.lazy(() =>
   import('./components/LandingPages/Gallery/Gallery')
 );
+
 const Guests = React.lazy(() =>
   import('./components/LandingPages/Guests/Guests')
 );
@@ -161,6 +162,14 @@ function App() {
             }
           />
           <Route
+            path="admin"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Admin />
+              </Suspense>
+            }
+          />
+          <Route
             path="events"
             element={
               <Suspense fallback={<Preloader />}>
@@ -267,6 +276,7 @@ function App() {
             }
           />
         </Route>
+
       </Routes>
       {/* </Router> */}
     </>

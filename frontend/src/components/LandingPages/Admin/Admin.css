@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+
+.main{
+    margin: 2%;
+    font-family: 'League-spartan';
+}
+
+.subheading{
+    font-size: 28px;
+  display: block;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  color: #000;
+  line-height: 1;
+  z-index: 1;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-family: 'League Spartan';
+}
+
+.flex-container {
+    display: flex;
+    font-family: 'League Spartan';
+    margin-left: 5px;
+    font-size: 20px;
+    width: auto;
+    max-width: vw;
+    justify-content: space-evenly;
+}
+
+.row-elements{
+    margin: '10px';
+}
+.link{
+    flex-grow: 1;
+}
+
+@media (max-widht: 800px){
+    .link{
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 800px) {
+    .flex-container {
+      font-size: 15px;
+    }
+  }
+
+
+.table-head{
+    font-weight: 500;
+    background-color:rgb(212, 208, 208) ;
+
+}
+  
